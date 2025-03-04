@@ -1,16 +1,7 @@
-using System.Text.Json.Serialization;
-
 namespace NutritionConsole;
 
-public class NutritionConfig
+public class NutritionConfig(string nutritionUnit, int valuePerCharacter)
 {
-    public string NutritionUnit { get; }
-    public int ValuePerCharacter { get; }
-
-	/*[JsonConstructor]*/
-    public NutritionConfig(string nutritionUnit, int valuePerCharacter)
-    {
-        NutritionUnit = nutritionUnit;
-        ValuePerCharacter = valuePerCharacter;
-    }
+    public string NutritionUnit { get; } = nutritionUnit;
+    public int ValuePerCharacter { get; } = valuePerCharacter;
 }

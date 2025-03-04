@@ -2,9 +2,9 @@
 
 namespace NutritionConsole;
 
-public class Program
+public static class Program
 {
-    static int Main(string[] args)
+    public static int Main(string[] args)
     {
 		string json;
 		try
@@ -24,7 +24,7 @@ public class Program
 			return 1;
 		}
 
-		if (args.Count() == 0)
+		if (args.Length == 0)
 		{
 			Console.WriteLine("Invalid input");
 			return 1;
